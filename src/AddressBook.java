@@ -25,6 +25,7 @@ public class AddressBook {
     addressBook.addBuddy(buddy);
     addressBook.removeBuddy(0); //value changed from 0 to 1
         //This is for Github question 11 -> need to push in order ot show changes in github, elsewise it commits only affect local repo
+        //This is for question 17, editing the github file
 
     }
 }
