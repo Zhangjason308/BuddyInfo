@@ -1,25 +1,30 @@
 import java.util.ArrayList;
 
 public class AddressBook {
-    private final ArrayList<BuddyInfo> addresses;
+    private ArrayList<BuddyInfo> myBuddies;
 
     public AddressBook() {
-        addresses = new ArrayList<>();
+        myBuddies = new ArrayList<>();
     }
 
-    public void addBuddy(BuddyInfo address) {
-        addresses.add(address);
+    public void addBuddy(BuddyInfo aBuddy) {
+        if(aBuddy != null) {
+            myBuddies.add(aBuddy);
+        }
     }
-
-    public void removeBuddy(BuddyInfo address) {
-        addresses.remove(address);
+    public BuddyInfo removeBuddy(int index) {
+        if (index >=0 && index < myBuddies.size()) {
+           return myBuddies.remove(index);
+        }
+        return null;
     }
     public static void main(String[] args) {
     System.out.println("Address Book");
     BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
     AddressBook addressBook = new AddressBook();
     addressBook.addBuddy(buddy);
-    addressBook.removeBuddy(buddy);
+    addressBook.removeBuddy(0); //value changed from 0 to 1
+        //This is for Github question 11
 
     }
 }
